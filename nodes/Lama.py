@@ -98,13 +98,9 @@ class LaMaInpainting:
     global simple_lama
     simple_lama = None
     def run(self,image,mask):
-        global simple_lama
-
         result=[]
-        if simple_lama==None:
-            simple_lama = SimpleLama()
-        else:
-            simple_lama.model.to("cuda" if torch.cuda.is_available() else "cpu")
+        simple_lama = SimpleLama()
+        simple_lama.model.to("cuda" if torch.cuda.is_available() else "cpu")
 
         for i in range(len(image)):
             im=image[i]
@@ -117,7 +113,7 @@ class LaMaInpainting:
             res=pil2tensor(res)
             result.append(res)
         # result.save("inpainted.png")
-        if simple_lama.device=='cuda':
-            simple_lama.model.to('cpu')
-
+        # if simple_lama.device=='cuda':
+        #     simple_lama.model.to('cpu')
+        del simple_lama
         return (result,)
