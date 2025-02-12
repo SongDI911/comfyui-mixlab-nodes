@@ -1260,41 +1260,41 @@ logging.info('--------------')
 logging.info('\033[91m ### Mixlab Nodes: \033[93mLoaded')
 # print('\033[91m ### Mixlab Nodes: \033[93mLoaded')
 
-try:
-    from .nodes.ChatGPT import SimulateDevDesignDiscussions,SiliconflowTextToImageNode,JsonRepair,ChatGPTNode,ShowTextForGPT,CharacterInText,TextSplitByDelimiter,SiliconflowFreeNode
-    logging.info('ChatGPT.available True')
+# try:
+#     from .nodes.ChatGPT import SimulateDevDesignDiscussions,SiliconflowTextToImageNode,JsonRepair,ChatGPTNode,ShowTextForGPT,CharacterInText,TextSplitByDelimiter,SiliconflowFreeNode
+#     logging.info('ChatGPT.available True')
 
-    NODE_CLASS_MAPPINGS_V = {
-       "ChatGPTOpenAI":ChatGPTNode,
-       "SiliconflowLLM":SiliconflowFreeNode,
-       "SiliconflowTextToImageNode":SiliconflowTextToImageNode,
-        "ShowTextForGPT":ShowTextForGPT,
-        "CharacterInText":CharacterInText,
-        "TextSplitByDelimiter":TextSplitByDelimiter,
-        "JsonRepair":JsonRepair,
+#     NODE_CLASS_MAPPINGS_V = {
+#        "ChatGPTOpenAI":ChatGPTNode,
+#        "SiliconflowLLM":SiliconflowFreeNode,
+#        "SiliconflowTextToImageNode":SiliconflowTextToImageNode,
+#         "ShowTextForGPT":ShowTextForGPT,
+#         "CharacterInText":CharacterInText,
+#         "TextSplitByDelimiter":TextSplitByDelimiter,
+#         "JsonRepair":JsonRepair,
 
-        "SimulateDevDesignDiscussions":SimulateDevDesignDiscussions
-    }
+#         "SimulateDevDesignDiscussions":SimulateDevDesignDiscussions
+#     }
 
-    # 一个包含节点友好/可读的标题的字典
-    NODE_DISPLAY_NAME_MAPPINGS_V = {
-        "ChatGPTOpenAI":"ChatGPT & Local LLM ♾️Mixlab",
-        "SiliconflowLLM":"LLM Siliconflow ♾️Mixlab",
-        "SiliconflowTextToImageNode":"TextToImage Siliconflow ♾️Mixlab",
-        "ShowTextForGPT":"Show Text ♾️MixlabApp",
-        "CharacterInText":"Character In Text",
-        "TextSplitByDelimiter":"Text Split By Delimiter",
-        "JsonRepair":"Json Repair",
+#     # 一个包含节点友好/可读的标题的字典
+#     NODE_DISPLAY_NAME_MAPPINGS_V = {
+#         "ChatGPTOpenAI":"ChatGPT & Local LLM ♾️Mixlab",
+#         "SiliconflowLLM":"LLM Siliconflow ♾️Mixlab",
+#         "SiliconflowTextToImageNode":"TextToImage Siliconflow ♾️Mixlab",
+#         "ShowTextForGPT":"Show Text ♾️MixlabApp",
+#         "CharacterInText":"Character In Text",
+#         "TextSplitByDelimiter":"Text Split By Delimiter",
+#         "JsonRepair":"Json Repair",
 
-        "SimulateDevDesignDiscussions":"SimulateDevDesignDiscussions ♾️Mixlab Podcast"
-    }
+#         "SimulateDevDesignDiscussions":"SimulateDevDesignDiscussions ♾️Mixlab Podcast"
+#     }
 
 
-    NODE_CLASS_MAPPINGS.update(NODE_CLASS_MAPPINGS_V)
-    NODE_DISPLAY_NAME_MAPPINGS.update(NODE_DISPLAY_NAME_MAPPINGS_V)
+#     NODE_CLASS_MAPPINGS.update(NODE_CLASS_MAPPINGS_V)
+#     NODE_DISPLAY_NAME_MAPPINGS.update(NODE_DISPLAY_NAME_MAPPINGS_V)
 
-except Exception as e:
-    logging.info('ChatGPT.available False')
+# except Exception as e:
+#     logging.info('ChatGPT.available False')
 
 
 try:
